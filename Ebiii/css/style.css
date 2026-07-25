@@ -439,3 +439,96 @@ font-family: 'Lobster', cursive;
     opacity: 1;
   }
 }
+
+/* Phone layout */
+@media (max-width: 600px) {
+  html,
+  body {
+    min-height: 100%;
+  }
+
+  body {
+    margin: 0;
+    overflow-x: hidden;
+    background-size: cover;
+    background-position: center;
+  }
+
+  body > br {
+    display: none;
+  }
+
+  #card,
+  #card-front,
+  #card-inside {
+    height: min(680px, 100svh);
+  }
+
+  #card {
+    width: 100%;
+    max-width: 430px;
+    margin: 0 auto;
+    transform: none;
+    top: 0;
+  }
+
+  #card-front,
+  #card-inside {
+    width: 100%;
+    left: 0;
+  }
+
+  #card.open-fully {
+    transform: none;
+  }
+
+  .wrap {
+    padding: 1.25rem 1.5rem;
+  }
+
+  #card h1 {
+    margin: 0;
+    font-size: clamp(2.5rem, 13vw, 3.7rem);
+  }
+
+  #card-inside {
+    font-size: clamp(1rem, 4.5vw, 1.2rem);
+  }
+
+  #card-inside .wrap {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .cake_and_velas {
+    bottom: 15%;
+  }
+
+  #cake {
+    width: min(230px, 64vw);
+    height: auto;
+    margin-top: -8rem;
+  }
+
+  .velas {
+    top: 180px;
+  }
+
+  .card-front_inside {
+    height: 62%;
+  }
+
+  .polaroid {
+    width: min(210px, 62vw);
+    height: min(195px, 57vw);
+    border-bottom-width: 42px;
+  }
+
+  #card-front button {
+    right: 1rem;
+    bottom: 1rem;
+    border-radius: 50%;
+    min-width: 46px;
+    min-height: 46px;
+  }
+}
